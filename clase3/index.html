@@ -1,0 +1,28 @@
+<html ng-app="cursoAngular">
+  <body>
+    <input ng-model="rootModel" placeholder="Root Model" type="text" />
+    <div ng-controller="ControladorUno">
+      <input type="button" value="Enviar Broadcast" ng-click="enviarBroadcast()" />
+      <input type="button" value="Controlador 1 Boton" ng-click="actualizarRootModel()" />
+      {{textoMiScope}}
+      {{rootModel}}
+      Contador: {{rootCounter}}
+      <div ng-controller="ControladorHijoDos">
+        <input type="button" ng-click="ejectuarEmit()" value="Ejecutar Emit"/>
+      </div>
+    </div>
+    <div ng-controller="ControladorDos">
+      <input type="button" value="Controlador 2 Boton" ng-click="actualizarRootModel()" />
+      {{textoMiScope}}
+      {{rootModel}}
+      Contador: {{rootCounter}}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script>
+      var myApp = angular.module('cursoAngular',[]);
+    </script>
+    <script src="scripts/Controlador1.js"></script>
+    <script src="scripts/Controlador2.js"></script>
+    <script src="scripts/ControladorHijo2.js"></script>
+  </body>
+</html>

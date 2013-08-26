@@ -5,7 +5,7 @@
 <body ng-controller='CartController'>
 <h1>Your Shopping Cart</h1>
 <div ng-repeat='item in items'>
-  <span>{{item.title}}</span>
+  <span>{{item.title | uppercase}}</span>
   <input ng-model='item.quantity'>
   <span>{{item.price | currency}}</span>
   <span>{{item.price * item.quantity | currency}}</span>
@@ -23,6 +23,15 @@
     $scope.remove = function(index) {
       $scope.items.splice(index, 1);
     };
+
+    scope.$watch('items', function() {
+      var getTotal = $scope.items;
+      var total = 0;
+      for (var i = 0; i < getTotal.length; i++) {
+        total += getTotal[i].price * getTotal[i].quantity;
+      }
+      $scope.cartTotal = total;
+    });
   }
 </script>
 </body>
