@@ -1,0 +1,16 @@
+<h1>Usuarios De La Lavanderia</h1>
+<ul class="thumbnails">
+  <li ng-repeat="usuario in usuarios" class="span5 clearfix">
+    <div class="thumbnail clearfix">
+      <img src="http://placehold.it/320x320" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+      <div class="caption" class="pull-left">
+        <a href="#/ropa/{{usuario.slug}}" class="btn btn-primary icon  pull-right">Mi Ropa</a>
+        <h4>
+          <a href="#" >{{ usuario.nombre }}</a>
+        </h4>
+        <small><b>Direccion: </b>{{ usuario.direccion }}</small>
+      </div>
+    </div>
+  </li>
+
+</ul>

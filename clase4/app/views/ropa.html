@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="span4">
+    <h2>Agregar Ropa</h2>
+    <form ng-submit="agregarRopaSubmit()">
+      <label>Fecha Recibida</label>
+      <input type="date" ng-model="nuevaRopa.fechaRecibida" class="span3" required>
+      <label>Fecha Entrega</label>
+      <input type="date" ng-model="nuevaRopa.fechaEntrega" class="span3" required>
+      <label>Peso</label>
+      <input type="number" ng-model="nuevaRopa.peso" class="span3" required>
+      <label>Precio</label>
+      <span>{{ nuevaRopa.precio }} </span>
+      <div class="clearfix"></div>
+      <input type="submit" value="Agregar Ropa" class="btn btn-primary pull-left">
+    </form>
+  </div>
+  <div class="span8">
+    <h1> Ropilla de {{ usuario.nombre }}</h1>
+    <table class="table table-striped table-condensed">
+      <thead>
+      <tr>
+        <th>Fecha Recibida</th>
+        <th>Fecha Entrega</th>
+        <th>Peso</th>
+        <th>Precio</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="ropa in usuario.ropas">
+        <td>{{ ropa.fechaRecibida }}</td>
+        <td>{{ ropa.fechaEntrega }}</td>
+        <td>{{ ropa.peso }} Kg.</td>
+        <td>{{ ropa.precio | currency:"₡" }}</td>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
