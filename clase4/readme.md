@@ -3,7 +3,23 @@ Codigo para la clase 4
 
 Asegurese de instalar la version v0.10.17 de nodejs, puede utilizar el Node Version Manager para manejar varias versiones
 https://github.com/creationix/nvm.
+Ejercicios:
+-------------------------
+* Agregar una columna en la tabla de Ropas (en la vista de ropa) que contenga un boton para eliminar las ropas. 30Min
+  * Utilice el Dialog de Angular UI http://angular-ui.github.io/bootstrap/ para crear una confirmacion de si desea eliminar.
+* Agregar un Formulario en el listado de Usuarios, para Agregar nuevos Usuarios. 30Min
+  * El slug tiene que ser creado en base al nombre, alfanumerico y en minusculas
+    (eliminar cualquier caracter del nombre, que no cumpla esta regla)
+* Cambiar los input type="date" por el DatePicker de AngularUI 30Min
 
+Tarea:
+-------------------------
+* Utilice http://bootsnipp.com/snipps/poll-example Para crear una nueva ruta (usar Yeoman Angular Generator) con:
+  * la cantidad de Kilos lavados por Mes (Utilice http://angular-ui.github.io/bootstrap/.
+  * la cantidad de Kilos lavados por Usuario.
+
+Plot:
+-------------------------
 * Ejecutar en la terminal: npm install -g yo
 * Una vez instalado, hay que instalar el generador de angular con el siguiente comando: npm install -g generator-angular
 * Ejecutar: yo angular cetav-lavanderia, esto crea el proyecto, va a salir un prompt pidiendo instalar
@@ -36,18 +52,3 @@ https://github.com/creationix/nvm.
 * Codigo de submit del Form
 * Agregar ng-submit al form
 * Agregar metodo agregarRopa al factory de Usuarios
-
-Ejercicios (Explicar):
--------------------------
-* Agregar una columna en la tabla de Ropas (en la vista de ropa) que contenga un boton para eliminar las ropas. 30Min
-  * Utilice el Dialog de Angular UI http://angular-ui.github.io/bootstrap/ para crear una confirmacion de si desea eliminar.
-* Agregar un Formulario en el listado de Usuarios, para Agregar nuevos Usuarios. 30Min
-  * El slug tiene que ser creado en base al nombre, alfanumerico y en minusculas
-    (eliminar cualquier caracter del nombre, que no cumpla esta regla)
-* Cambiar los input type="date" por el DatePicker de AngularUI 30Min
-
-Tarea (Explicar):
--------------------------
-* Utilice http://bootsnipp.com/snipps/poll-example Para crear una nueva ruta (usar Yeoman Angular Generator) con:
-  * la cantidad de Kilos lavados por Mes (Utilice http://angular-ui.github.io/bootstrap/.
-  * la cantidad de Kilos lavados por Usuario.
