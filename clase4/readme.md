@@ -15,7 +15,7 @@ Ejercicios:
 Tarea:
 -------------------------
 * Utilice http://bootsnipp.com/snipps/poll-example Para crear una nueva ruta (usar Yeoman Angular Generator) con:
-  * la cantidad de Kilos lavados por Mes (Utilice http://angular-ui.github.io/bootstrap/.
+  * la cantidad de Kilos lavados por Mes.
   * la cantidad de Kilos lavados por Usuario.
 
 Plot:
