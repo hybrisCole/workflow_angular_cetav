@@ -107,6 +107,10 @@ angular.module('cetavLavanderiaApp')
       agregarRopa: function(slug,ropa){
         var usuario = this.buscarPorSlug(slug);
         usuario.ropas.push(ropa);
+      },
+      eliminarRopa: function(slug,ropa){
+        var usuario = this.buscarPorSlug(slug);
+        usuario.ropas = _.difference(usuario.ropas,ropa);
       }
     };
   }]);

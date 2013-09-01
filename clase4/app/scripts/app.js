@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cetavLavanderiaApp', [])
+angular.module('cetavLavanderiaApp', ['ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

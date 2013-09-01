@@ -23,6 +23,7 @@
         <th>Fecha Entrega</th>
         <th>Peso</th>
         <th>Precio</th>
+        <th></th>
       </tr>
       </thead>
       <tbody>
@@ -31,10 +32,22 @@
         <td>{{ ropa.fechaEntrega }}</td>
         <td>{{ ropa.peso }} Kg.</td>
         <td>{{ ropa.precio | currency:"₡" }}</td>
+        <td> <button type="button" class="btn btn-primary" ng-click="openModalEliminarRopa(ropa)">Eliminar</button> </td>
         </td>
       </tr>
       </tbody>
     </table>
+    </div>
+</div>
+<div modal="modalEliminarRopa" close="closeModalEliminarRopa()" options="modalOpts">
+  <div class="modal-header">
+    <h4>Eliminar Ropa</h4>
+  </div>
+  <div class="modal-body">
+    <p>Desea eliminar la ropa?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-warning cancel" ng-click="closeModalEliminarRopa()">Cerrar</button>
+    <button class="btn btn-warning cancel" ng-click="eliminarRopa()">Eliminar</button>
   </div>
 </div>
-

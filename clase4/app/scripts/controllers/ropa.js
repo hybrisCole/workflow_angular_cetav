@@ -11,8 +11,26 @@ angular.module('cetavLavanderiaApp')
 
     $scope.agregarRopaSubmit = function(){
       usuarioFactory.agregarRopa($routeParams.slug,$scope.nuevaRopa);
-      $scope.usuario = usuarioFactory.buscarPorSlug($routeParams.slug);
       $scope.nuevaRopa = {};
     };
 
+    $scope.eliminarRopa = function(){
+      usuarioFactory.eliminarRopa($routeParams.slug,$scope.ropaAEliminar);
+      $scope.modalEliminarRopa = false;
+    }
+
+    $scope.modalOpts = {
+      backdropFade: true,
+      dialogFade:true,
+      keyBoard:true
+    };
+
+    $scope.openModalEliminarRopa = function (ropa) {
+      $scope.ropaAEliminar = ropa;
+      $scope.modalEliminarRopa = true;
+    };
+
+    $scope.closeModalEliminarRopa = function () {
+      $scope.modalEliminarRopa = false;
+    };
   }]);
