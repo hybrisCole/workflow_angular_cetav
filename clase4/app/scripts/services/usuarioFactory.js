@@ -29,7 +29,7 @@ angular.module('cetavLavanderiaApp')
             peso:6,
             precio: 3500
           }
-        ],
+        ]
       },
       {
         slug: 'aosmani',
@@ -54,7 +54,7 @@ angular.module('cetavLavanderiaApp')
             peso:6,
             precio: 3500
           }
-        ],
+        ]
       },
       {
         slug: 'pirish',
@@ -73,7 +73,7 @@ angular.module('cetavLavanderiaApp')
             peso:12,
             precio: 7500
           }
-        ],
+        ]
       },
       {
         slug: 'tjholo',
@@ -92,7 +92,7 @@ angular.module('cetavLavanderiaApp')
             peso:14,
             precio: 8000
           }
-        ],
+        ]
       }
     ];
 
