@@ -12,20 +12,20 @@ angular.module('cetavLavanderiaApp')
         direccion: 'Vargas Araya, 25mts S Escuela Laboratorio',
         ropas:[
           {
-            fechaRecibida:'09-05-2013',
-            fechaEntrega:'09-09-2013',
+            fechaRecibida:'2013-09-05',
+            fechaEntrega:'2013-09-09',
             peso:8,
             precio: 4500
           },
           {
-            fechaRecibida:'09-11-2013',
-            fechaEntrega:'09-12-2013',
+            fechaRecibida:'2013-09-11',
+            fechaEntrega:'2013-09-12',
             peso:5,
             precio: 2500
           },
           {
-            fechaRecibida:'09-18-2013',
-            fechaEntrega:'09-21-2013',
+            fechaRecibida:'2013-09-18',
+            fechaEntrega:'2013-09-21',
             peso:6,
             precio: 3500
           }
@@ -37,20 +37,20 @@ angular.module('cetavLavanderiaApp')
         direccion: 'Vargas Araya, 150 Mts E CR Canada',
         ropas:[
           {
-            fechaRecibida:'08-15-2013',
-            fechaEntrega:'08-19-2013',
+            fechaRecibida:'2013-08-15',
+            fechaEntrega:'2013-08-19',
             peso:8,
             precio: 4500
           },
           {
-            fechaRecibida:'08-24-2013',
-            fechaEntrega:'08-26-2013',
+            fechaRecibida:'2013-08-24',
+            fechaEntrega:'2013-08-26',
             peso:10,
             precio: 6000
           },
           {
-            fechaRecibida:'09-01-2013',
-            fechaEntrega:'09-03-2013',
+            fechaRecibida:'2013-09-01',
+            fechaEntrega:'2013-09-03',
             peso:6,
             precio: 3500
           }
@@ -62,14 +62,14 @@ angular.module('cetavLavanderiaApp')
         direccion: 'Ciudad Cortes, 300 Mts S Escuela Nieborowsky',
         ropas:[
           {
-            fechaRecibida:'08-26-2013',
-            fechaEntrega:'08-29-2013',
+            fechaRecibida:'2013-08-26',
+            fechaEntrega:'2013-08-29',
             peso:5,
             precio: 3000
           },
           {
-            fechaRecibida:'09-05-2013',
-            fechaEntrega:'08-08-2013',
+            fechaRecibida:'2013-09-05',
+            fechaEntrega:'2013-08-08',
             peso:12,
             precio: 7500
           }
@@ -81,14 +81,14 @@ angular.module('cetavLavanderiaApp')
         direccion: 'San Pedro, Frente Macchu Picchu',
         ropas:[
           {
-            fechaRecibida:'08-07-2013',
-            fechaEntrega:'08-09-2013',
+            fechaRecibida:'2013-08-07',
+            fechaEntrega:'2013-08-09',
             peso:4,
             precio: 3000
           },
           {
-            fechaRecibida:'08-29-2013',
-            fechaEntrega:'08-30-2013',
+            fechaRecibida:'2013-08-29',
+            fechaEntrega:'2013-08-30',
             peso:14,
             precio: 8000
           }
