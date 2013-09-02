@@ -12,5 +12,24 @@
       </div>
     </div>
   </li>
-
 </ul>
+<button class="btn" ng-click="openModalAgregarUsuario()">Agregar Usuario</button>
+<div modal="modalAgregarUsuario" close="closeModalAgregarUsuario()" options="modalOpts">
+  <form name="nuevoUsuarioForm" ng-submit="agregarUsuarioSubmit()">
+  <div class="modal-header">
+    <h4>Agregar Usuario</h4>
+  </div>
+  <div class="modal-body">
+
+      <label>Nombre</label>
+      <input type="text" name="nombre" ng-pattern="nombreRegex" ng-model="nuevoUsuario.nombre" class="span3" required>
+      <span class="alert-error" ng-show="nuevoUsuarioForm.nombre.$error.pattern">Formato Incorrecto.</span>
+      <label>Direccion</label>
+      <input type="text" ng-model="nuevoUsuario.direccion" class="span3" required>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-warning cancel" ng-click="closeModalAgregarUsuario()">Cerrar</button>
+    <input type="submit" value="Agregar Usuario" class="btn btn-primary">
+  </form>
+  </div>
+</div>

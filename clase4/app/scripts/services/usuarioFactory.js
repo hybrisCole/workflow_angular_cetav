@@ -98,6 +98,11 @@ angular.module('cetavLavanderiaApp')
 
     // Public API here
     return {
+      agregar: function(usuario){
+        usuario.ropas = [];
+        usuario.slug = usuario.nombre.replace(/ /g,"").toLowerCase();
+        usuariosJSON.push(usuario);
+      },
       listado: function() {
         return usuariosJSON;
       },

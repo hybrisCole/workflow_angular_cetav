@@ -7,7 +7,7 @@
       <label>Fecha Entrega</label>
       <input type="date" ng-model="nuevaRopa.fechaEntrega" class="span3" required>
       <label>Peso</label>
-      <input type="number" ng-model="nuevaRopa.peso" class="span3" required>
+      <input type="number" ng-model="nuevaRopa.peso" min="1" class="span3" required>
       <label>Precio</label>
       <span>{{ nuevaRopa.precio }} </span>
       <div class="clearfix"></div>
