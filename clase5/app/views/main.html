@@ -1,0 +1,47 @@
+<div ng-show="!todosCargados">
+  Cargando ToDos....
+</div>
+<div class="row" ng-show="todosCargados">
+  <button class="btn" ng-click="openModalAgregarTodo()">Agregar Todo</button>
+</div>
+<div modal="modalAgregarTodo" close="closeModalAgregarTodo()" options="modalOpts">
+  <form ng-submit="agregarTodo()">
+  <div class="modal-header">
+    <h4>Agregar Todo</h4>
+  </div>
+  <div class="modal-body">
+    <h5>Nombre</h5>
+    <input type="text" ng-model="nuevoTodo.nombre" class="span3" required>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-warning cancel" ng-click="closeModalAgregarTodo()">Cerrar</button>
+    <input type="submit" value="Agregar TODO" class="btn btn-primary">
+  </div>
+  </form>
+</div>
+<div class="row" ng-show="todosCargados">
+  <div class="span2 well" ng-repeat="todo in todos">
+    <span class="badge badge-warning pull-right" ng-show="!todo.status">Por Hacer</span>
+    <span class="badge badge-info pull-right" ng-show="todo.status">Listo</span>
+    <p><strong>{{ todo.nombre }}</strong></p>
+    <li class="dropdown">
+      <a class="dropdown-toggle btn btn-primary">
+        Acciones <i class="icon-circle-arrow-down"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li ng-show="!todo.status">
+          <a ng-click="marcarListo(todo)">Marcar como Listo</a>
+        </li>
+        <li ng-show="todo.status">
+          <a ng-click="marcarPorHacer(todo)">Marcar como Por Hacer</a>
+        </li>
+        <li>
+          <a ng-click="eliminar(todo)">Eliminar</a>
+        </li>
+        <li>
+          <a ng-click="modificar(todo)">Modificar</a>
+        </li>
+      </ul>
+    </li>
+  </div>
+</div>
