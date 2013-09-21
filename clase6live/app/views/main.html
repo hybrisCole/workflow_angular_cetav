@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="span6">
+    <form ng-submit="loginChat()" ng-show="!loggedIn">
+      <div class="controls controls-row">
+        <input id="name" name="name"
+               ng-model="mailUsuario" type="email" class="span3"
+               placeholder="Ingrese su email" />
+      </div>
+      <div class="controls">
+        <button type="submit" class="btn btn-primary input-medium">
+          Entrar al Chat!!
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row" ng-show="loggedIn">
+  <div class="span9 contenedor_chat">
+    <ul class="thumbnails">
+      <li class="span3 clearfix"
+          ng-repeat="mensaje in mensajes | orderBy: 'fecha':true">
+        <div class="thumbnail clearfix">
+          <div class="caption pull-left">
+            <h4> {{ mensaje.usuario }} </h4>
+            <div class="word-wrap"> {{ mensaje.cuerpo }} </div>
+            <small><b>Fecha: </b>
+              {{ mensaje.fecha | date: 'MM/dd/yyyy @ h:ma'}}
+            </small>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="span3">
+    <div class="contenedor_chat">
+      <h3>Usuarios Conectados</h3>
+      <div ng-repeat="usuario in usuarios">
+        {{ usuario }}
+      </div>
+    </div>
+    <form ng-submit="enviarMensaje()">
+      <div class="controls">
+        <input id="mensaje"
+               name="mensaje"
+               ng-model="mensaje"
+               type="text"
+               class="span3"
+               placeholder="Ingrese su mensaje..." />
+      </div>
+      <div class="controls">
+        <button type="submit"
+                class="btn btn-primary input-medium">
+          Enviar Mensaje
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
